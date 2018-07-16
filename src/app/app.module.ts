@@ -3,11 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { MapPage } from '../pages/map/map';
+import { EventmapPage } from '../pages/eventmap/eventmap';
+import { CreateroutePage } from '../pages/createroute/createroute';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,8 +20,9 @@ import { GoogleMaps } from '@ionic-native/google-maps'
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
     ContactPage,
+    EventmapPage,
+    CreateroutePage,
     HomePage,
     MapPage,
     TabsPage
@@ -28,14 +30,15 @@ import { GoogleMaps } from '@ionic-native/google-maps'
   imports: [
     BrowserModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCKFn6hnbxvE5WdGQiYXc8JBYIkOAZxd6c'
+      apiKey: 'AIzaSyAEerrtZJnH1l3lj4k8kvZUWzvViOPlBuY'
     }),
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
+    EventmapPage,
+    CreateroutePage,
     ContactPage,
     HomePage,
     MapPage,

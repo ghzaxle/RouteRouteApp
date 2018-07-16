@@ -14,16 +14,29 @@
 
 
 <ion-content padding>
-  <button id="start-button" ion-button (click)="onStart()" color="positive" block>
-    start
-  </button>
-  <button id="stop-button5" ion-button (click)="onStop()" color="positive" block>
-    stop
-  </button>
-  <ion-card color="dark">
-    <ion-card-content alian="center">
-      <p>{{showtime}}</p>
-    </ion-card-content>
-  </ion-card>
-  <div id="map_canvas"></div>
+  <div id="map_canvas">
+    <ion-row>
+      <ion-col>
+        <ion-card color="dark">
+          <p>{{distance * 0.001}}km</p>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card color="dark">
+          <p>{{showtime}}</p>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </div>
+  <ion-row center>
+    <ion-col text-center>
+      <button id="start-button" ion-button (click)="onStart()" *ngIf="bflg" color="positive" block>
+        <ion-icon name="bicycle"></ion-icon>
+        開始
+      </button>
+      <button id="stop-button" ion-button (click)="onStop()" *ngIf="!bflg" color="positive" block outline>
+        終了
+      </button>
+    </ion-col>
+  </ion-row>
 </ion-content>

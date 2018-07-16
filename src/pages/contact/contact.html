@@ -8,38 +8,37 @@
 
 <ion-content padding id="page3">
   <ion-list id="eVENT-list6">
-    <ion-searchbar placeholder="" name="" id="eVENT-search1"></ion-searchbar>
     <ion-item-sliding>
-      <ion-item color="none" id="eVENT-list-item13">
+      <ion-item (click)="startEvent('静岡県自転車交流会')" color="none" id="eVENT-list-item13">
         <ion-thumbnail item-left>
-          <img />
+          <img src="assets/imgs/eventa.png" />
         </ion-thumbnail>
         <h2>
-          Item
+          静岡県自転車交流会
         </h2>
       </ion-item>
       <ion-item-options side="left">
         <button ion-button color="positive"></button>
       </ion-item-options>
     </ion-item-sliding>
-    <ion-item color="none" id="eVENT-list-item14">
+    <ion-item (click)="startEvent('東京都自転車交流会')" color="none" id="eVENT-list-item14">
       <ion-thumbnail item-left>
-        <img />
+        <img src="assets/imgs/eventb.jpg" />
       </ion-thumbnail>
       <h2>
-        Item
+        東京都自転車交流会
       </h2>
     </ion-item>
-    <ion-item color="none" id="eVENT-list-item15">
+    <ion-item (click)="startEvent('福島自転車交流会')" color="none" id="eVENT-list-item15">
       <ion-thumbnail item-left>
-        <img />
+        <img src="assets/imgs/eventc.png" />
       </ion-thumbnail>
       <h2>
-        Item
+        福島自転車交流会
       </h2>
     </ion-item>
   </ion-list>
-  <button id="eVENT-button2" ion-button color="positive" block>
+  <button (click)="createEvent()" id="eVENT-button2" ion-button color="positive" block>
     Create Event!!
   </button>
 </ion-content>

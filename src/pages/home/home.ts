@@ -1,14 +1,28 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
+  startlat: number;
+  startlng: number;
+  // options
+  enableHighAccuracy: boolean = false;
 
-  constructor(public navCtrl: NavController) {
+  //interval
+  interval: number;
+  starttime: Date;
+  nowtime: Date;
+  count: number;
 
+  //root
+  points: Object[] = [];
+
+  constructor() {
   }
 
 }
+
+

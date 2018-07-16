@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { EventmapPage } from '../eventmap/eventmap';
+import { CreateroutePage } from '../createroute/createroute';
 
 @Component({
   selector: 'page-contact',
@@ -11,4 +13,10 @@ export class ContactPage {
 
   }
 
+  startEvent(name: String) {
+    this.navCtrl.push(EventmapPage, { eventname: name });
+  }
+  createEvent() {
+    this.navCtrl.push(CreateroutePage);
+  }
 }
