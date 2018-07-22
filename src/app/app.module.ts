@@ -9,9 +9,14 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { MapPage } from '../pages/map/map';
 import { EventmapPage } from '../pages/eventmap/eventmap';
 import { CreateroutePage } from '../pages/createroute/createroute';
+import { WelcomePage } from '../pages/welcome/welcome';
+import { LoginPage } from '../pages/login/login';
+import { SignupPage } from '../pages/signup/signup';
+import { EventDetailPage } from '../pages/event-detail/event-detail';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { SignaturePadModule } from 'angular2-signaturepad';
 
 import { AgmCoreModule } from '@agm/core';
 
@@ -25,6 +30,10 @@ import { GoogleMaps } from '@ionic-native/google-maps'
     CreateroutePage,
     HomePage,
     MapPage,
+    WelcomePage,
+    LoginPage,
+    SignupPage,
+    EventDetailPage,
     TabsPage
   ],
   imports: [
@@ -42,6 +51,12 @@ import { GoogleMaps } from '@ionic-native/google-maps'
     ContactPage,
     HomePage,
     MapPage,
+    HomePage,
+    MapPage,
+    WelcomePage,
+    LoginPage,
+    SignupPage,
+    EventDetailPage,
     TabsPage
   ],
   providers: [

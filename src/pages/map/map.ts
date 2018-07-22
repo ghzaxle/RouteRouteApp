@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {
   GoogleMaps, GoogleMap, GoogleMapsEvent,
-  GoogleMapOptions, Marker, ILatLng
+  Marker, ILatLng
 } from '@ionic-native/google-maps';
 import { Geolocation, GeolocationOptions } from '@ionic-native/geolocation';
 import { HTTP } from '@ionic-native/http';

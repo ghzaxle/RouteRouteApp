@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {
   GoogleMaps, GoogleMap, GoogleMapsEvent,
-  GoogleMapOptions, Marker, Polyline, ILatLng
+  Polyline, ILatLng
 } from '@ionic-native/google-maps';
-import { Geolocation, GeolocationOptions } from '@ionic-native/geolocation';
+import { Geolocation} from '@ionic-native/geolocation';
 import { HTTP } from '@ionic-native/http';
 /**
  * Generated class for the EventmapPage page.
@@ -21,7 +21,7 @@ import { HTTP } from '@ionic-native/http';
 })
 export class EventmapPage {
   private map: GoogleMap;
-  private eventname: String;
+  private event: String;
 
   //members
   members: Object[] = [{ name: "Anzai", lat: 35.52325888888889, lng: 139.2856011111111 },
@@ -524,7 +524,7 @@ export class EventmapPage {
   ];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private geolocation: Geolocation, private http: HTTP) {
-    this.eventname = navParams.get("eventname");
+    this.event = navParams.get("data");
   }
 
   ionViewDidLoad() {

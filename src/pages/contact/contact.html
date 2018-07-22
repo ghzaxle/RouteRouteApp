@@ -1,44 +1,29 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      Event Page
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="createEvent()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding id="page3">
   <ion-list id="eVENT-list6">
-    <ion-item-sliding>
-      <ion-item (click)="startEvent('静岡県自転車交流会')" color="none" id="eVENT-list-item13">
-        <ion-thumbnail item-left>
-          <img src="assets/imgs/eventa.png" />
-        </ion-thumbnail>
-        <h2>
-          静岡県自転車交流会
-        </h2>
+    <ion-item-sliding *ngFor="let event of eventItems">
+      <ion-item (click)="startEvent(event)" color="none" id="eVENT-list-item13">
+        <ion-avatar item-start>
+            <img [src]="event.profilePic" />
+          </ion-avatar>
+          <h2>{{event.name}}</h2>
+          <p>{{event.about}}</p>
       </ion-item>
       <ion-item-options side="left">
         <button ion-button color="positive"></button>
       </ion-item-options>
     </ion-item-sliding>
-    <ion-item (click)="startEvent('東京都自転車交流会')" color="none" id="eVENT-list-item14">
-      <ion-thumbnail item-left>
-        <img src="assets/imgs/eventb.jpg" />
-      </ion-thumbnail>
-      <h2>
-        東京都自転車交流会
-      </h2>
-    </ion-item>
-    <ion-item (click)="startEvent('福島自転車交流会')" color="none" id="eVENT-list-item15">
-      <ion-thumbnail item-left>
-        <img src="assets/imgs/eventc.png" />
-      </ion-thumbnail>
-      <h2>
-        福島自転車交流会
-      </h2>
-    </ion-item>
   </ion-list>
-  <button (click)="createEvent()" id="eVENT-button2" ion-button color="positive" block>
-    Create Event!!
-  </button>
 </ion-content>
